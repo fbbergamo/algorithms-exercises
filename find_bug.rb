@@ -33,8 +33,9 @@ def find_bugs(versions)
 end
 
 def binary_search(versions, start, ended)
-  return versions[ended] if (ended - start == 1 ) or (ended == start )
+  return versions[ended] if (ended - start == 1 )
   middle = (start+ended)/2
+  puts middle
   if bug?(versions[middle])
     binary_search(versions, start, middle)
   else
