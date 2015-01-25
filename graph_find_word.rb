@@ -65,7 +65,7 @@ def build_graph(words)
 end
 
 def find_word(list_word, word)
-  return false if word.nil? or word.size > 4
+  return false if word.nil? or word.size > list_word.count
   graph = build_graph(list_word)
   graph.each do |node|
     selected_node = node[1] #is a hash if a node
